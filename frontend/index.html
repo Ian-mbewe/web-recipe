@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Management System</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #F5DEB3; scroll-behavior: smooth; }
+    header, footer, nav { text-align: center; margin-bottom: 20px; }
+    nav ul { list-style: none; padding: 0; }
+    nav ul li { display: inline; margin: 0 10px; }
+    nav a { text-decoration: none; color: darkblue; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+    h1, h2 { text-align: center; }
+
+    .form-section { margin-bottom: 30px; }
+    .form-group { margin-bottom: 10px; }
+    label { display: inline-block; width: 180px; }
+    input { padding: 6px; width: 300px; }
+    button { padding: 8px 12px; margin-top: 10px; cursor: pointer; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .action-buttons button { margin-right: 5px; }
+
+    section { margin-bottom: 40px; }
+  </style>
+</head>
+<body id="top">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Group Members</h1>
+    <p><b>Ian Mbewe</b> - 202304395</p>
+    <p><b>Simon Mweene</b> - 201701343</p>
+    <p><b>Melisa Mumba</b> - 202402571</p>
+    <p><b>Racheal Daka</b> - 202303375</p>
+    <hr>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#ingredients">Ingredients</a></li>
+      <li><a href="#steps">Steps</a></li>
+      <li><a href="#nutrition">Nutrition</a></li>
+      <li><a href="#recipe_table">Recipe Table</a></li>
+      <li><a href="#db_section">Recipe Management (Database)</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="food-security.html">Food Security</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- INTRO -->
+    <section>
+      <h1>Personal Recipe Card</h1>
+      <h2>Recipe: Zambia</h2>
+      <marquee><span class="highlight">Chef's special!</span></marquee>
+    </section>
+
+    <!-- INGREDIENTS -->
+    <section id="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>Calories</li>
+        <li>Proteins</li>
+        <li>Carbs</li>
+        <li>Fats</li>
+        <li>Servings</li>
+      </ul>
+      <figure>
+        <img src="ingrediets_1.png" alt="A collection of Zambian cooking ingredients" width="300">
+        <figcaption>Traditional Ingredients</figcaption>
+      </figure>
+    </section>
+
+    <!-- STATIC RECIPE TABLE -->
+    <section id="recipe_table">
+      <h2>Recipe Table</h2>
+      <table border="1" cellpadding="5" cellspacing="0" width="100%">
+        <thead>
+          <tr align="center">
+            <th>Flour(Variation)</th>
+            <th>Relish</th>
+            <th>Vegetables</th>
+            <th>Alternative(Vegetarian)</th>
+            <th>Servings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cassava Flour (Tute)</td>
+            <td>Kapenta, Mbuzi, Ma set</td>
+            <td>Impwa, Cassava Leaves, Sweet Potato Leaves</td>
+            <td>Chunks, Vegetarian Sausage</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Mealie Meal (Maize flour)</td>
+            <td>Sausage, Fish, Beef</td>
+            <td>Chinese, Cabbage, Beans, Pumpkin leaves</td>
+            <td>Eggs, White meat</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Millet</td>
+            <td>Beef sausage, Pork, Caterpillars</td>
+            <td>Eggplants, Kalembla, Lumanda</td>
+            <td>Soya beans, Green beans</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- STEPS -->
+    <section id="steps">
+      <h2>Steps</h2>
+      <ol>
+        <li>Prepare ingredients</li>
+        <li>Boil water</li>
+        <li>Add maize meal slowly while stirring</li>
+        <li>Cook and serve with relish</li>
+      </ol>
+      <figure>
+        <img src="cookingProcess.png" alt="Cooking process showing how to prepare nshima" width="300">
+        <figcaption>Cooking in Progress</figcaption>
+      </figure>
+    </section>
+
+    <!-- NUTRITION -->
+    <section id="nutrition">
+      <h2>Nutrition Facts</h2>
+      <table border="1" cellpadding="5" cellspacing="0" width="100%">
+        <thead>
+          <tr align="center">
+            <th>Calories</th>
+            <th>Protein</th>
+            <th>Carbs</th>
+            <th>Fats</th>
+            <th>Servings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>220</td><td>10g</td><td>45g</td><td>5g</td><td>4</td></tr>
+          <tr><td>180</td><td>8g</td><td>35g</td><td>4g</td><td>2</td></tr>
+          <tr><td>250</td><td>12g</td><td>50g</td><td>6g</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- DATABASE RECIPE MANAGEMENT SYSTEM -->
+    <section id="db_section" class="container">
+      <h1>Recipe Management System (Database)</h1>
+
+      <div class="form-section">
+        <h2 id="form-title">Add New Recipe</h2>
+        <form id="recipeForm">
+          <input type="hidden" id="recipeId">
+          <div class="form-group">
+            <label for="flour_variant">Flour Variant:</label>
+            <input type="text" id="flour_variant" required>
+          </div>
+          <div class="form-group">
+            <label for="relish">Relish:</label>
+            <input type="text" id="relish">
+          </div>
+          <div class="form-group">
+            <label for="vegetables">Vegetables:</label>
+            <input type="text" id="vegetables">
+          </div>
+          <div class="form-group">
+            <label for="vegetarian_alternative">Vegetarian Alternative:</label>
+            <input type="text" id="vegetarian_alternative">
+          </div>
+          <div class="form-group">
+            <label for="servings">Servings:</label>
+            <input type="number" id="servings">
+          </div>
+          <button type="submit">Save Recipe</button>
+        </form>
+      </div>
+
+      <div>
+        <h2>Recipes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Flour Variant</th>
+              <th>Relish</th>
+              <th>Vegetables</th>
+              <th>Vegetarian Alternative</th>
+              <th>Servings</th>
+              <th>Created At</th>
+              <th>Updated At</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="recipeList"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2>Dish Gallery</h2>
+      <div style="text-align: center;">
+        <figure>
+          <img src="nshima.png" alt="Nshima with vegetables and meat" width="300">
+          <figcaption>Nshima served with vegetables and meat</figcaption>
+        </figure>
+        <img src="image.png" alt="Zambian dish photo" width="300">
+        <img src="nshimaplate.png" alt="Nshima plate served with relish" width="300" height="200">
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section>
+      <h2>Dish Introduction (Video)</h2>
+      <video controls width="320" poster="poster.png">
+        <source src="Video-of-Recipe-and-Website.mp4" type="video/mp4">
+        <source src="dish-tip.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <p><em>In this clip: I share why I love nshima and a quick cooking tip!</em></p>
+    </section>
+
+    <!-- AUDIO -->
+    <section>
+      <h2>Plating & Aroma Tips (Audio)</h2>
+      <audio controls>
+        <source src="plating-tip.ogg" type="audio/ogg">
+        <source src="Nshima.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- CANVAS -->
+    <section>
+      <h2>Simple Canvas Drawing</h2>
+      <canvas id="myCanvas" width="100" height="100" style="border:1px solid #000;"></canvas>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 | <a href="#top">Back to Top</a></p>
+  </footer>
+
+  <!-- JS FOR CANVAS -->
+  <script>
+    const c = document.getElementById("myCanvas");
+    const ctx = c.getContext("2d");
+    ctx.fillStyle = "#FFA07A";
+    ctx.fillRect(10, 10, 80, 80);
+  </script>
+
+  <!-- JS FOR DATABASE OPERATIONS -->
+  <script>
+    const form = document.getElementById("recipeForm");
+    const recipeList = document.getElementById("recipeList");
+    const recipeIdInput = document.getElementById("recipeId");
+    const formTitle = document.getElementById("form-title");
+
+    const apiURL = "http://localhost:3000/api/recipe";
+
+    async function getRecipes() {
+      const res = await fetch(apiURL);
+      const data = await res.json();
+      recipeList.innerHTML = "";
+      data.forEach(recipe => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${recipe.recipe_id}</td>
+          <td>${recipe.flour_variant}</td>
+          <td>${recipe.relish}</td>
+          <td>${recipe.vegetables}</td>
+          <td>${recipe.vegetarian_alternative}</td>
+          <td>${recipe.servings}</td>
+          <td>${new Date(recipe.created_at).toLocaleString()}</td>
+          <td>${new Date(recipe.updated_at).toLocaleString()}</td>
+          <td class="action-buttons">
+            <button onclick="editRecipe(${recipe.recipe_id})">Edit</button>
+            <button onclick="deleteRecipe(${recipe.recipe_id})">Delete</button>
+          </td>
+        `;
+        recipeList.appendChild(row);
+      });
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const id = recipeIdInput.value;
+
+      const recipeData = {
+        flour_variant: document.getElementById("flour_variant").value,
+        relish: document.getElementById("relish").value,
+        vegetables: document.getElementById("vegetables").value,
+        vegetarian_alternative: document.getElementById("vegetarian_alternative").value,
+        servings: parseInt(document.getElementById("servings").value)
+      };
+
+      if (id) {
+        await fetch(`${apiURL}/${id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(recipeData)
+        });
+      } else {
+        await fetch(apiURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(recipeData)
+        });
+      }
+
+      form.reset();
+      recipeIdInput.value = "";
+      formTitle.textContent = "Add New Recipe";
+      getRecipes();
+    });
+
+    window.editRecipe = async function(id) {
+      const res = await fetch(`${apiURL}/${id}`);
+      const recipe = await res.json();
+      recipeIdInput.value = recipe.recipe_id;
+      document.getElementById("flour_variant").value = recipe.flour_variant;
+      document.getElementById("relish").value = recipe.relish;
+      document.getElementById("vegetables").value = recipe.vegetables;
+      document.getElementById("vegetarian_alternative").value = recipe.vegetarian_alternative;
+      document.getElementById("servings").value = recipe.servings;
+      formTitle.textContent = "Edit Recipe";
+    }
+
+    window.deleteRecipe = async function(id) {
+      await fetch(`${apiURL}/${id}`, { method: "DELETE" });
+      getRecipes();
+    }
+
+    getRecipes();
+  </script>
+</body>
+</html>
